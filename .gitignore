@@ -32,3 +32,8 @@ target/
 *.iws
 *.iml
 *.ipr
+
+### Gradle ###
+.gradle
+gradle/
+build/
