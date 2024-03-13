@@ -7,6 +7,7 @@ fun PluginDependenciesSpec.commonPlugins() {
     id("org.jetbrains.kotlin.jvm") version "1.8.0"
     id(Plugins.javaTestFixtures)
     id(Plugins.jacoco)
+    id(Plugins.Detekt.detekt_plugin) version Plugins.Detekt.version
 }
 
 fun RepositoryHandler.commonRepositories() {
@@ -44,6 +45,12 @@ fun DependencyHandler.commonDependencies() {
 object Plugins {
     const val jacoco = "jacoco"
     const val javaTestFixtures = "java-test-fixtures"
+
+    object Detekt {
+        const val version = "1.23.5"
+        const val detekt_plugin = "io.gitlab.arturbosch.detekt"
+        const val detekt_formatting = "$detekt_plugin:detekt-formatting:$version"
+    }
 }
 
 object Lib {
