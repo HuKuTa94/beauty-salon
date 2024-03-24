@@ -6,7 +6,6 @@ import org.assertj.core.api.Assertions.assertThat
 import org.junit.jupiter.api.Test
 
 class FeatureSampleUseCaseImplTest {
-
     @Test
     fun `usecase param is true - successful text message`() {
         FeatureSampleUseCaseImpl().execute(true).shouldBeRight()
