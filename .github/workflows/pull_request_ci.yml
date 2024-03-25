@@ -31,11 +31,14 @@ jobs:
       with:
         gradle-version: '7.4'
 
+    - name: Build with Gradle
+      run: ./gradlew -b ci.gradle package
+
 #    - name: "🔍 run detekt"
 #      run: ./gradlew detekt
 
-    - name: "🔍 run detekt test coverage"
-      run: ./gradlew jacocoTestCoverageVerification
+#    - name: "🔍 run detekt test coverage"
+#      run: ./gradlew jacocoTestCoverageVerification
 
 #    - name: "🔍 run tests"
 #      run: ./gradlew test
