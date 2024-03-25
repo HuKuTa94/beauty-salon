@@ -32,7 +32,7 @@ jobs:
         gradle-version: '7.4'
 
     - name: Build with Gradle
-      run: ./gradlew -b ci.gradle package
+      run: ./gradlew build
 
 #    - name: "🔍 run detekt"
 #      run: ./gradlew detekt
