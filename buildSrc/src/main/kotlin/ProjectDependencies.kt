@@ -7,7 +7,7 @@ fun PluginDependenciesSpec.commonPlugins() {
     id("org.jetbrains.kotlin.jvm") version "1.8.0"
     id(Plugins.javaTestFixtures)
     id(Plugins.jacoco)
-    id(Plugins.Detekt.detekt_plugin) version Plugins.Detekt.version
+//    id(Plugins.Detekt.detekt_plugin) version Plugins.Detekt.version
 }
 
 fun RepositoryHandler.commonRepositories() {

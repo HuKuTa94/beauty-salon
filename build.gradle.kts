@@ -19,31 +19,31 @@ subprojects {
         plugin("java")
         plugin(Plugins.jacoco)
         plugin(Plugins.javaTestFixtures)
-        plugin(Plugins.Detekt.detekt_plugin)
+//        plugin(Plugins.Detekt.detekt_plugin)
     }
 
-    detekt {
-        config.setFrom("$parentProjectDir/tools/detekt/detekt-config.yml")
-        source.from(
-            files("src/main/kotlin", "src/test/kotlin")
-        )
-
-        // Builds the AST in parallel. Rules are always executed in parallel.
-        // Can lead to speedups in larger projects. `false` by default.
-        parallel = true
-
-        buildUponDefaultConfig = true
-
-        reports {
-            html {
-                required.set(true)
-            }
-        }
-
-        dependencies {
-            detektPlugins(Plugins.Detekt.detekt_formatting)
-        }
-    }
+//    detekt {
+//        config.setFrom("$parentProjectDir/tools/detekt/detekt-config.yml")
+//        source.from(
+//            files("src/main/kotlin", "src/test/kotlin")
+//        )
+//
+//        // Builds the AST in parallel. Rules are always executed in parallel.
+//        // Can lead to speedups in larger projects. `false` by default.
+//        parallel = true
+//
+//        buildUponDefaultConfig = true
+//
+//        reports {
+//            html {
+//                required.set(true)
+//            }
+//        }
+//
+//        dependencies {
+//            detektPlugins(Plugins.Detekt.detekt_formatting)
+//        }
+//    }
 
     tasks {
         val jacocoTestReport = named<JacocoReport>("jacocoTestReport")

@@ -18,4 +18,6 @@ class FeatureSampleUseCaseImplTest {
         assertThat(actualError)
             .isInstanceOf(FeatureSampleUseCaseError.BusinessError::class.java)
     }
+//
+//
 }
